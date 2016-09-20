@@ -10,6 +10,9 @@ class ReactReadingTime extends React.Component {
       text: 'Foo is baz and bar'
     };
   }
+updateText(ev) {
+  this.setState({ text: ev.target.value })
+}
 
   render() {
     return (
@@ -17,6 +20,7 @@ class ReactReadingTime extends React.Component {
         <div className='col-lg-8 col-lg-offset-2 form-group'>
           <textarea
             value={this.state.text}
+            onChange={::this.updateText}
             className='form-control'
             style={{ height: '500px', resize: 'none' }}>
           </textarea>
