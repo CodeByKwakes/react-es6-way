@@ -8,10 +8,17 @@ export default class ReadingTime extends React.Component {
   static defaultProps = {
     wordsPerMinute: 270
   }
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      readTime: 0
+    }
+  }
 
   render() {
     return (
-      <div></div>
+      <div>Hello ReadingTime!</div>
     )
   }
 }
